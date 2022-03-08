@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Welcome</title>
+</head>
+<body>
+    <div id="container" style="padding: 20px;">
+        <a href="/dashboard">Home</a> - <a href="/destroy_session">Logout</a>
+        <h1>Hello {{user.first_name}}!</h1>
+        <table class="table table-striped" style="margin: 10px 20px;">
+            <thead class="thead-light">
+                <tr>
+                    <th>Title</th>
+                    <th>Network</th>
+                    <th>Release Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            {% for one_show in all_shows %}
+            <tr>
+                <td>{{ one_show.title }}</td>
+                <td>{{ one_show.network }}</td>
+                <td>{{ one_show.release_date.strftime("%B %d, %Y") }}</td>
+                <td><a href="/show_show/{{one_show.id}}"> Show </a> | <a href="/edit_show/{{one_show.id}}"> Edit </a> | <a href="/delete_show/{{one_show.id}}"> DELETE</td>
+                </tr>
+                {% endfor %}
+            </table>
+        <a href="/add_show">Add a New Show</a>
+    </div>
+</body>
+</html>

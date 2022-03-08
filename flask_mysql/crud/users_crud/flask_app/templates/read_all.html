@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Users</title>
+</head>
+<body>
+    <h2>All User Info:</h2>
+    
+    
+    <table class="table table-striped" style="margin: 10px 20px;">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        {% for one_user in all_users %}
+        <tr>
+        <td>{{ one_user.id }}</td>
+        <td>{{ one_user.first_name + " " + one_user.last_name }}</td>
+        <td>{{ one_user.email }}</td>
+        <td>{{ one_user.created_at.strftime("%B %d, %Y") }}</td>
+        <td><a href="/one_user/{{one_user.id}}"> Show </a> | <a href="/edit_user/{{one_user.id}}"> Edit </a> | <a href="/delete_user/{{one_user.id}}"> DELETE</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/new_user"><p style="margin-left:30px">Add a New User</p></a>
+</body>
+</html>

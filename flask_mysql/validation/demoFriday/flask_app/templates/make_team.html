@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Team</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <a href="/make_team">Add a Team</a>
+    <a href="/update_team">Update a Team</a>
+    <a href="/makeOwner">Add an Owner</a>
+    <h1>Add a New Team</h1>
+    <form action="/making_team", method ="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        
+        <label for="location">Location:</label>
+        <input type="text" name="location">
+        
+        <label for="sport">Sport:</label>
+        <input type="text" name="sport">
+        
+        <label for="champs">Championships:</label>
+        <input type="text" name="champs">
+
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>

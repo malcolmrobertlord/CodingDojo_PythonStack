@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    width: 900px;
+}
+
+#column1, #column2 {
+    flex: 1;
+    background-color:grey;
+    height: 500px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#register {
+    color: blue;
+}
+
+#login {
+    color: green;
+}
+
+form > * {
+    margin: 10px 0px;
+}

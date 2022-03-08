@@ -1,0 +1,44 @@
+INSERT INTO dojos_and_ninjas_schema.dojos (id, name, created_at, updated_at)
+VALUES(1, "Winterfell", NOW(), NOW());
+INSERT INTO dojos_and_ninjas_schema.dojos (id, name, created_at, updated_at)
+VALUES(2, "Hoth", NOW(), NOW());
+INSERT INTO dojos_and_ninjas_schema.dojos (id ,name, created_at, updated_at)
+VALUES(3, "The Shire", NOW(), NOW());
+
+DELETE FROM dojos_and_ninjas_schema.dojos WHERE id <=3;
+
+INSERT INTO dojos_and_ninjas_schema.dojos (id, name, created_at, updated_at)
+VALUES(1, "Chicago", NOW(), NOW());
+INSERT INTO dojos_and_ninjas_schema.dojos (id, name, created_at, updated_at)
+VALUES(2, "Atlantis", NOW(), NOW());
+INSERT INTO dojos_and_ninjas_schema.dojos (id ,name, created_at, updated_at)
+VALUES(3, "Schitt's Creek", NOW(), NOW());
+
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Mario", "Bro", "32", NOW(), NOW(), 1);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Luigi", "Bro", "25", NOW(), NOW(), 1);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Peach", "Sis", "34", NOW(), NOW(), 1);
+
+
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Bart", "Simpson", "12", NOW(), NOW(), 2);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Maggie", "Simpson", "2", NOW(), NOW(), 2);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Lisa", "Simpson", "14", NOW(), NOW(), 2);
+
+
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("David", "Rose", "34", NOW(), NOW(), 3);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Johnny", "Rose", "62", NOW(), NOW(), 3);
+INSERT INTO dojos_and_ninjas_schema.ninjas (first_name, last_name, age,created_at, updated_at, dojo_id)
+VALUES("Alexis", "Rose", "31", NOW(), NOW(), 3);
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas WHERE dojo_id = 1;
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas WHERE dojo_id = 3;
+
+SELECT dojo_id FROM dojos_and_ninjas_schema.ninjas WHERE id=9;

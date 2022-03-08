@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container {
+            margin: auto;
+            width: 700px;
+            margin-top: 30px;
+            border: 2px solid black;
+            height: 400px;
+            padding: 20px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+    </style>
+    <title>{{show.title}}</title>
+</head>
+<body>
+    <div id="container">
+        <a href="/dashboard">Home</a> - <a href="/destroy_session">Logout</a>
+        <h1>{{ show.title }}</h1>
+        <h4>Network: {{ show.network }}<h4>
+        <h4>Release Date: {{ show.release_date }}</h4>
+        <h4>Description: {{ show.description }}</h4>
+        <p>Posted By: {{user.first_name}}  {{ user.last_name }}</p>
+    </div>
+</body>
+</html>

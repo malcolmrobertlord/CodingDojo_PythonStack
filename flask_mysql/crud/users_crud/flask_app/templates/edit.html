@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Friend</title>
+    <style>
+        .form {
+            display:flex;
+            margin: 10px;
+        }
+        input {
+            margin: 0px 10px;
+        }
+        #container {
+            margin: auto;
+            width: 700px;
+            margin-top: 30px;
+            border: 2px solid black;
+            height: 400px;
+            padding: 20px;
+        }
+        form {
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <a href="/users" id="dashboardbtn">HOME</a>
+    <h1>Edit User {{user.id}}</h1>
+    <form action="/update_user" method="POST">
+        <input type="hidden" name="id" value="{{user_id}}">
+        <div class="form">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" value="{{user.first_name}}">
+        </div>
+        <div class="form">
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" value="{{user.last_name}}">
+        </div>
+        <div class="form">
+            <label for="email" >Email:</label>
+            <input type="text" name="email" value="{{user.email}}">
+        </div>
+        <input type="submit" value="Edit User">
+    </form> 
+    <a href="/one_user/{{user_id}}">Show User</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="container">
+        <h1>Dojo Survey</h1>
+        <div id="formbox">
+            <form id="form" action='/process' method='post'>
+                <label for='name'>Name:</label>
+                    <input type='text' name='name'> <br>
+                <label for='location'>Location:</label>
+                    <select id="location" name='location'>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Online">Online</option>
+                        <option value="Other">Other</option>
+                    </select>
+                <p>What is your favorite language(s)?</p>
+                    <input type="checkbox" name="Python" value="Python">
+                    <label for="Python">Python</label><br>
+                    <input type="checkbox" name="HTML" value="HTML">
+                    <label for="HTML">HTML</label><br>
+                    <input type="checkbox" name="Javascript" value="Javascript">
+                    <label for="Javascript">Javascript</label><br>
+                <p>Do you like pizza?</p>
+                    <input type="radio" name="pizza" id="Yes" value="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" name="pizza" id="No" value="No">
+                    <label for="No">No</label>
+                <p>Any additional comments:</p>
+                    <textarea name="comment" rows="5" cols="20">
+                    </textarea> <br>
+                    <input type="submit" value="Submit">
+            </form>
+        </div>
+</div>
+</body>
+</html>
+
